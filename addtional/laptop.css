@@ -1,0 +1,12 @@
+/* laptop media query */
+@media (max-width: 1300px){
+    .container {
+        padding: 0px 50px;
+    }
+
+    .form-container {
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+}
