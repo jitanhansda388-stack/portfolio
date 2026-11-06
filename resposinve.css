@@ -1,0 +1,119 @@
+/* laptope small size screens responsive size max-width 1024px  */
+/* ========================================= */
+@media (max-width: 1680px) {
+    .hero-right img {
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* header content  */
+    .header-middle ul {
+        gap: 25px;
+    }   
+}
+
+
+/* ==================================== */
+/* tablate screen size responsive size */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    .header-middle {
+        display: none;
+    }
+
+    .header-middle-mobile {
+        display: none;
+        overflow: auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 50px;
+        padding-top: 20px;
+    }
+
+    .hero-left {
+        place-items: center;
+        gap: 30px;
+    }
+
+    .hero-left p {
+        text-align: center;
+    }
+
+    .header-right button {
+        display: none;
+    }
+
+    .header-right span {
+        display: block;
+    }
+
+    .toggle-menu {
+    display: block;
+}
+}
+
+
+@media (max-width: 470px) {
+    .hero-btns-container {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-left button {
+        width: 100%;
+        font-size: 13px;
+        justify-content: center;
+        padding: 12px 0px;
+    }
+
+    .header-middle-mobile{
+        width: 100%;
+    }
+
+    .header-middle-mobile ul li {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 425px) {
+    .hero-left h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.1px;
+    }
+    .hero-left p {
+        /* font-size: 11px; */
+    }
+    .hero-exprience-info {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .hero-exprience-info div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    #hero-worked-info {
+        display: none;
+    }
+    #hero-worked-info-mobile {
+        display: block;
+    }
+}
+
+/* ===========================
+    chhta mobile sreen ke liye 
+============================ */
+
+@media (max-width: 350px) {
+    .hero-left h1 {
+        font-size: 1.2rem;
+    }
+}
