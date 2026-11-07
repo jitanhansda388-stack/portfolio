@@ -117,3 +117,237 @@
         font-size: 1.2rem;
     }
 }
+
+
+
+
+/* =========================================
+About content responsive size
+========================================= */
+
+/* =========================================
+   LAPTOP RESPONSIVE
+   1024px
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .about-container {
+        padding: 50px 4%;
+    }
+
+    .about-container > section {
+        gap: 30px;
+    }
+
+    .about-left {
+        padding: 20px;
+    }
+
+    .about-left img {
+        width: 90%;
+    }
+
+    .about-left-stacks {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .about-left-stacks div {
+        padding: 8px;
+    }
+
+    .about-right {
+        gap: 24px;
+    }
+
+    .about-right-stack {
+        gap: 14px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+   768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    .about-container {
+        padding: 45px 5%;
+    }
+
+    .about-container > section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-left {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .about-left img {
+        width: 80%;
+    }
+
+    .about-left-stacks {
+        width: 85%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-right {
+        width: 100%;
+        gap: 25px;
+    }
+
+    .about-right h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .about-right .about-pragraph p {
+        font-size: 0.95rem;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    .about-container {
+        padding: 35px 5%;
+    }
+
+    .about-container > section {
+        gap: 35px;
+    }
+
+    .about-left {
+        padding: 15px;
+        gap: 18px;
+    }
+
+    .about-left img {
+        width: 100%;
+    }
+
+    .about-left-stacks {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .about-left-stacks div {
+        padding: 8px;
+    }
+
+    .about-left-stacks div label,
+    .about-left-stacks div lable {
+        font-size: 1.2rem;
+    }
+
+    .about-left-stacks div span {
+        font-size: 0.75rem;
+    }
+
+    .about-right {
+        gap: 20px;
+    }
+
+    .about-right h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-right .about-pragraph {
+        gap: 12px;
+    }
+
+    .about-right .about-pragraph p {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .about-right-stack-container {
+        gap: 18px;
+    }
+
+    .about-right-stack {
+        gap: 12px;
+    }
+
+    .stack-box-about-right {
+        width: 42px;
+        height: 42px;
+    }
+
+    .stack-discription-about-right {
+        gap: 4px;
+    }
+
+    .stack-discription-about-right span {
+        font-size: 0.78rem;
+    }
+
+    #learn-more-about-btn {
+        padding: 11px 16px;
+        font-size: 0.85rem;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   360px
+========================================= */
+
+@media (max-width: 360px) {
+
+    .about-container {
+        padding: 30px 4%;
+    }
+
+    .about-left {
+        padding: 12px;
+    }
+
+    .about-left-stacks {
+        gap: 5px;
+    }
+
+    .about-left-stacks div {
+        padding: 6px 3px;
+    }
+
+    .about-left-stacks div label,
+    .about-left-stacks div lable {
+        font-size: 1rem;
+    }
+
+    .about-left-stacks div span {
+        font-size: 0.65rem;
+    }
+
+    .about-right h1 {
+        font-size: 1.6rem;
+    }
+
+    .about-right .about-pragraph p {
+        font-size: 0.8rem;
+    }
+
+    .stack-box-about-right {
+        width: 38px;
+        height: 38px;
+    }
+
+}

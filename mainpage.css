@@ -488,135 +488,192 @@ header {
     animation-delay: 1s;
 }
 
-/* ==================================
-    about me content
-================================== */
+/* =========================================
+   ABOUT SECTION
+========================================= */
 
 .about-container {
     width: 100%;
-    /* max-width: 1800px; */
     margin: 0 auto;
-    padding: 10px 5%;
+    padding: 60px 5%;
     background: var(--bg-tertiary);
 }
 
-section {
+.about-container > section {
     width: 100%;
-    max-width: 1800px;
+    max-width: 1400px;
+    margin: 0 auto;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-    gap: 48px;
-    padding: 24px 0px;
+
+    gap: clamp(30px, 4vw, 60px);
 }
 
-/* ============================
-about-left
-================================ */
+
+/* =========================================
+   ABOUT LEFT
+========================================= */
 
 .about-left {
     width: 100%;
+    min-width: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     gap: 24px;
+
     border: 1px solid var(--border-light);
     border-radius: 10px;
-    padding: 24px 24px;
+
+    padding: clamp(16px, 3vw, 30px);
 }
 
 .about-left img {
+    display: block;
+
     width: 80%;
+    max-width: 450px;
+    height: auto;
+
+    object-fit: cover;
+
     border: 1px solid var(--border-light);
     border-radius: 10px;
+
     background: var(--bg-secondary);
 }
 
+
+/* =========================================
+   ABOUT LEFT STATISTICS
+========================================= */
+
 .about-left-stacks {
     width: 80%;
-    display: flex;
-    border-top: 1px solid var(--border-light);
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    border-radius: 10px;
+
+    gap: 12px;
+
+    border-top: 1px solid var(--border-light);
+    padding-top: 16px;
 }
 
 .about-left-stacks div {
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+
+    gap: 5px;
+    padding: 8px 4px;
 }
 
+.about-left-stacks div label,
 .about-left-stacks div lable {
     font-weight: bold;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: var(--text-accent);
 }
 
 .about-left-stacks div span {
     color: var(--text-muted);
-    font-size: 0.5rem, 4vw, 1rem;
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
+    line-height: 1.4;
 }
 
-/* =================================
-about-right
-============================== */
+
+/* =========================================
+   ABOUT RIGHT
+========================================= */
 
 .about-right {
+    width: 100%;
+    min-width: 0;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 40px;
+
+    gap: clamp(20px, 3vw, 35px);
 }
 
 .about-right .about-me {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
     color: var(--text-accent);
 }
 
 .about-right .about-me::after {
-    content: " ---------------------";
-    width: 200px;
+    content: "";
+
+    width: clamp(50px, 10vw, 120px);
     height: 1px;
-    color: var(--text-accent);
+
+    background: var(--text-accent);
 }
 
 .about-right h1 {
-    font-size: clamp(1.rem, 2vw, 1.5rem);
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    line-height: 1.2;
 }
 
 .about-right .about-pragraph {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     gap: 16px;
 }
 
-.about-right div p {
-    font-size: clamp(0.8rem, 1vw, 1.2rem);
+.about-right .about-pragraph p {
+    color: var(--text-muted);
+
+    font-size: clamp(0.85rem, 1.1vw, 1rem);
+    line-height: 1.8;
 }
 
-/* =============================================
-about-right-stack-container
-=========================================== */
+
+/* =========================================
+   ABOUT RIGHT STACK CONTAINER
+========================================= */
 
 .about-right-stack-container {
+    width: 100%;
+
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+
+    gap: 20px;
 }
 
 .about-right-stack {
+    width: 100%;
+
     display: flex;
-    gap: 24px;
     align-items: center;
+
+    gap: 18px;
 }
 
 .stack-box-about-right {
     width: 50px;
     height: 50px;
-    aspect-ratio: 1/1;
+    flex-shrink: 0;
+
+    aspect-ratio: 1 / 1;
+
     border: 1px solid var(--border-light);
     border-radius: 5px;
 }
@@ -624,18 +681,49 @@ about-right-stack-container
 .stack-discription-about-right {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+
+    gap: 6px;
 }
 
+.stack-discription-about-right label,
 .stack-discription-about-right lable {
     color: var(--text-accent);
     font-weight: bold;
 }
 
+.stack-discription-about-right span {
+    color: var(--text-muted);
+
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   LEARN MORE BUTTON
+========================================= */
+
 #learn-more-about-btn {
-    padding: 8px 16px;
-    max-width: 176px;
+    width: fit-content;
+    max-width: 100%;
+
+    padding: 12px 20px;
+
     border: none;
     border-radius: 5px;
+
     background: var(--primary);
+    color: var(--text-primary);
+
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    transition: 0.3s ease;
 }
+
+#learn-more-about-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+
